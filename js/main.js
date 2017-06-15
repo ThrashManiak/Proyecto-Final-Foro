@@ -47,7 +47,7 @@ var agregarComentario = function(e){
     
  
     var nombre = $("#nombreUsuario").val();
-    var comentario = $("#comentarioUsuarioo").val();
+    var comentario = $("#comentarioUsuario").val();
  
     
     $.post(api.url,{
