@@ -45,18 +45,17 @@ var crearComentarios = function(nombre){
 var agregarComentario = function(e){
   e.preventDefault();
     
-    var tomarData = $(this).parents("section")
-    var url = tomarData.data("id");
-    
+ 
     var nombre = $("#nombreUsuario").val();
-
-    //url  qur  ya  tenemos //se pone  un  objeto llave  del  valor
+    var comentario = $("#comentarioUsuarioo").val();
+ 
     
-    $.post(url,{
+    $.post(api.url,{
         
-      
+        author_name : nombre,
+        content : comentario
         
-    },function(response){
+    },function (response){
         console.log(response);
         cargarDatos();
     });
