@@ -2,19 +2,87 @@
 
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Foro Coool</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+        <link rel="stylesheet" href="css/main.css">    
 
-    <h1>Aqui van todos los temas</h1>
-    
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    
-    <script src="js/functions.js"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo col s6 m3 l3">Foro Cool</a>
+                </div>
+            </nav>
+            <div class="row">
+                <form  id="search-form" class="col s12 m3 offset-m9">
+                    <div class="input-field waves-effect waves-light">
+                        <input id="search" type="search">
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>  
+            </div>
+        </header>
+
+
+        <h4>Comentarios</h4>
+
+        <!-- Boton de Comentario -->
+
+        <a class="waves-effect waves-light btn" href="#modal1">Comentá</a>  
+
+        <!-- Modal Structure --> 
+
+        <div id="modal1" class="modal">
+           <form id="agregarComentario">
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="nombreUsuario" type="text" class="validate">
+                            <label for="nombre">Nombre</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="comentarioUsuario" type="text" class="validate">
+                            <label for="comentario">Comentario</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+                    <button type="submit"class="modal-action modal-close waves-effect waves-green btn-flat">Agregar</button>
+                </div>
+            </form>    
+        </div>
+
+        <!-- Post de Comentario -->
+        
+        <section id="postComentarios" class="row">
+<!--
+        <div class="col s12 m2  comentario">
+            <div class="card ">
+                <div class="card-title">
+                    <h4 id="nombre">Maria</h4>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+            </div>
+        </div>
+-->
+        </section>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
 </html>
